@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../icons/switch-off.png</file>
+        <file>../../icons/switch-on.png</file>
+        <file>../../icons/control.png</file>
+        <file>../../icons/drag.png</file>
+        <file>../../icons/full-screen.png</file>
+        <file>../../icons/golden-ratio.png</file>
+        <file>../../icons/move.png</file>
+        <file>../../icons/printer.png</file>
+        <file>../../icons/spline-chart.png</file>
+    </qresource>
+</RCC>
