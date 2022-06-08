@@ -14,10 +14,14 @@ MainWindow::MainWindow(QWidget *parent)
     imu=nullptr;
 
     plot=new PlotRealtimeCurve(this);
+    plot->makeGraph();
     QGridLayout* gl1=new QGridLayout(this);
     gl1->setMargin(0);
     gl1->addWidget(plot);
     ui->frame->setLayout(gl1);
+
+    scanPorts();
+
 
 }
 
@@ -32,9 +36,11 @@ void MainWindow::on_checkBox_serialSwitch_clicked(bool checked)
 {
     if(checked)
     {
-        imu=new ImuDriver(ui->lineEdit_imu_portName->text(),ui->spinBox_imu_baudRate->value(),this);
-        motor=new MotorDriver(0x01,ui->lineEdit_motor_portName->text(),ui->spinBox_motor_baudRate->value(),this);
+        imu=new ImuDriver(ui->comboBox_imuPort->currentText(),ui->comboBox_imuBaudrate->currentText().toUInt(),this);
+        motor=new MotorDriver(0x01,ui->comboBox_motorPort->currentText(),ui->comboBox_motorBaudrate->currentText().toUInt(),this);
         pid=new PID(ui->spinBox_kp->value(),ui->spinBox_ki->value(),ui->spinBox_kd->value(),this);
+
+        connect(imu,&ImuDriver::sendVelocityZ,plot,&PlotRealtimeCurve::updateImuData);
     }
     else
     {
@@ -60,6 +66,9 @@ void MainWindow::on_checkBox_controlSwitch_clicked(bool checked)
         {
             pid->control(v);
         });
+
+
+
         connect(pid,&PID::sendPidOutput,motor,&MotorDriver::cmdSpeedCloseLoopControl);
     }
     else
@@ -75,38 +84,50 @@ void MainWindow::on_checkBox_controlSwitch_clicked(bool checked)
 }
 
 
-void MainWindow::on_pushButton_positiveRotate_clicked()
+void MainWindow::scanPorts()
 {
-    if(motor!=nullptr)
+    ui->comboBox_imuPort->clear();
+    ui->comboBox_motorPort->clear();
+
+    auto portLists=QSerialPortInfo::availablePorts();
+
+    for(auto p:portLists)
     {
-        motor->cmdSpeedCloseLoopControl(1*ui->spinBox_speedValue->value());
+        ui->comboBox_imuPort->addItem(p.portName());
+        ui->comboBox_motorPort->addItem(p.portName());
     }
 }
 
 
-void MainWindow::on_pushButton_negativeRotate_clicked()
-{
-    if(motor!=nullptr)
-    {
-        motor->cmdSpeedCloseLoopControl(-1*ui->spinBox_speedValue->value());
-    }
-}
-
-
-void MainWindow::on_pushButton_rotateDegree_clicked()
-{
-    if(motor!=nullptr)
-    {
-//        motor
-    }
-}
-
-
-void MainWindow::on_pushButton_stopMotor_clicked()
+void MainWindow::on_checkBox_stopMotor_clicked()
 {
     if(motor!=nullptr)
     {
         motor->cmdMotorStop();
     }
+}
+
+
+void MainWindow::on_pushButton_cmdMotorSpeed_clicked()
+{
+    if(motor==nullptr)
+        return;
+
+    int flag=0;
+    ui->comboBox_motorSpeedFlag->currentText()=="+"?flag=1:flag=-1;
+    auto speed=flag*ui->spinBox_speedValue->value();
+    motor->cmdSpeedCloseLoopControl(speed);
+}
+
+
+void MainWindow::on_pushButton_cmdMotorDegree_clicked()
+{
+    if(motor==nullptr)
+        return;
+
+    int flag=0;
+    ui->comboBox_motorDegreeFlag->currentText()=="+"?flag=1:flag=-1;
+    auto speed=flag*ui->spinBox_degree->value();
+//    motor->cmdSpeedCloseLoopControl(speed);
 }
 

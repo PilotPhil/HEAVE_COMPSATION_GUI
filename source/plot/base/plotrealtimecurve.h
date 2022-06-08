@@ -17,6 +17,12 @@ public:
      * @brief makeGraph 制作图层
      */
     virtual void makeGraph();
+
+    /**
+     * @brief updateImuData 更新imu数据到canvas上
+     * @param value
+     */
+    void updateImuData(float value);
 };
 
 #endif // PLOTREALTIMECURVE_H

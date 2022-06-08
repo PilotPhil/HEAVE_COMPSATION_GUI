@@ -9,5 +9,7 @@
         <file>../../icons/move.png</file>
         <file>../../icons/printer.png</file>
         <file>../../icons/spline-chart.png</file>
+        <file>../../icons/warning.png</file>
+        <file>../../icons/stop-sign.png</file>
     </qresource>
 </RCC>

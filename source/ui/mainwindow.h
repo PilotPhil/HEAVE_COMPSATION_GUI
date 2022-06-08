@@ -7,6 +7,8 @@
 #include "pid.h"
 #include "plotrealtimecurve.h"
 
+#include <QtSerialPort/QSerialPortInfo>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -24,13 +26,11 @@ private slots:
 
     void on_checkBox_controlSwitch_clicked(bool checked);
 
-    void on_pushButton_positiveRotate_clicked();
+    void on_checkBox_stopMotor_clicked();
 
-    void on_pushButton_negativeRotate_clicked();
+    void on_pushButton_cmdMotorSpeed_clicked();
 
-    void on_pushButton_rotateDegree_clicked();
-
-    void on_pushButton_stopMotor_clicked();
+    void on_pushButton_cmdMotorDegree_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -40,5 +40,11 @@ private:
     ImuDriver* imu;
 
     PlotRealtimeCurve* plot;
+
+
+    /**
+     * @brief scanPorts 扫描串口
+     */
+    void scanPorts();
 };
 #endif // MAINWINDOW_H
