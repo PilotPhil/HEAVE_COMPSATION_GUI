@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>610</width>
+    <width>920</width>
     <height>695</height>
    </rect>
   </property>
@@ -24,7 +24,7 @@
     <item row="0" column="2">
      <widget class="QGroupBox" name="groupBox">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -38,15 +38,15 @@
       <property name="title">
        <string>补偿控制</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_5">
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_8">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>启用控制</string>
+          <string>kp</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="0" column="1" colspan="2">
         <widget class="QSpinBox" name="spinBox_kp">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -67,11 +67,18 @@
           <number>1000000000</number>
          </property>
          <property name="value">
-          <number>1000</number>
+          <number>11000</number>
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>ki</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" colspan="2">
         <widget class="QSpinBox" name="spinBox_ki">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -96,14 +103,14 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_5">
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_7">
          <property name="text">
-          <string>kp</string>
+          <string>kd</string>
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
+       <item row="2" column="1" colspan="2">
         <widget class="QSpinBox" name="spinBox_kd">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -124,21 +131,27 @@
           <number>1000000000</number>
          </property>
          <property name="value">
-          <number>1</number>
+          <number>3</number>
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_6">
-         <property name="text">
-          <string>ki</string>
+       <item row="3" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
          </property>
-        </widget>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_7">
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_8">
          <property name="text">
-          <string>kd</string>
+          <string>启用控制</string>
          </property>
         </widget>
        </item>
@@ -158,18 +171,12 @@ QCheckBox::indicator:checked {
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
+       <item row="4" column="2">
+        <widget class="QPushButton" name="pushButton_savePidCfg">
+         <property name="text">
+          <string>保存参数</string>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -677,6 +684,19 @@ QCheckBox::indicator:checked {
       </layout>
      </widget>
     </item>
+    <item row="0" column="3">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -684,7 +704,7 @@ QCheckBox::indicator:checked {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>610</width>
+     <width>920</width>
      <height>25</height>
     </rect>
    </property>

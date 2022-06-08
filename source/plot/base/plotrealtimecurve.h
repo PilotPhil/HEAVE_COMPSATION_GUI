@@ -3,6 +3,8 @@
 
 #include "plotdynamicdraw.h"
 
+#include <QTimer>
+
 class PlotRealtimeCurve : public PlotDynamicDraw
 {
 public:
@@ -23,6 +25,20 @@ public:
      * @param value
      */
     void updateImuData(float value);
+
+    /**
+     * @brief updateMotorData
+     * @param value
+     */
+    void updateMotorData(float value);
+
+    float imu_vel=0;
+
+    float motor_vel=0;
+
+    void update();
+
+    QTimer* timer;
 };
 
 #endif // PLOTREALTIMECURVE_H

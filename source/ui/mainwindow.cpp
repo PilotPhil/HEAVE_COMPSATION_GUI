@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 
 #include <QGridLayout>
+#include "inibase.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -22,7 +23,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     scanPorts();
 
-
+    ui->spinBox_kp->setValue(IniBase::GetInstance()->getValue("pid/kp").toInt());
+    ui->spinBox_ki->setValue(IniBase::GetInstance()->getValue("pid/ki").toInt());
+    ui->spinBox_kd->setValue(IniBase::GetInstance()->getValue("pid/kd").toInt());
 }
 
 MainWindow::~MainWindow()
@@ -41,6 +44,7 @@ void MainWindow::on_checkBox_serialSwitch_clicked(bool checked)
         pid=new PID(ui->spinBox_kp->value(),ui->spinBox_ki->value(),ui->spinBox_kd->value(),this);
 
         connect(imu,&ImuDriver::sendVelocityZ,plot,&PlotRealtimeCurve::updateImuData);
+        connect(motor,&MotorDriver::sendMotorVel,plot,&PlotRealtimeCurve::updateMotorData);
     }
     else
     {
@@ -62,19 +66,20 @@ void MainWindow::on_checkBox_controlSwitch_clicked(bool checked)
 {
     if(checked)
     {
-        connect(imu,&ImuDriver::sendVelocityZ,this,[&](float v)
-        {
-            pid->control(v);
-        });
+        pid=new PID(ui->spinBox_kp->value(),ui->spinBox_ki->value(),ui->spinBox_kd->value(),this);
 
-
-
+        connect(imu,&ImuDriver::sendVelocityZ,pid,&PID::control);
         connect(pid,&PID::sendPidOutput,motor,&MotorDriver::cmdSpeedCloseLoopControl);
     }
     else
     {
-        //disconnect(imu,&ImuDriver::sendVelocityZ,pid,&PID::control);
+        disconnect(imu,&ImuDriver::sendVelocityZ,pid,&PID::control);
         disconnect(pid,&PID::sendPidOutput,motor,&MotorDriver::cmdSpeedCloseLoopControl);
+
+        if(pid!=nullptr)
+        {
+            delete pid;
+        }
     }
 
     if(motor!=nullptr)
@@ -129,5 +134,13 @@ void MainWindow::on_pushButton_cmdMotorDegree_clicked()
     ui->comboBox_motorDegreeFlag->currentText()=="+"?flag=1:flag=-1;
     auto speed=flag*ui->spinBox_degree->value();
 //    motor->cmdSpeedCloseLoopControl(speed);
+}
+
+
+void MainWindow::on_pushButton_savePidCfg_clicked()
+{
+    IniBase::GetInstance()->setValue("pid/kp",QString::number(ui->spinBox_kp->value()));
+    IniBase::GetInstance()->setValue("pid/ki",QString::number(ui->spinBox_ki->value()));
+    IniBase::GetInstance()->setValue("pid/kd",QString::number(ui->spinBox_kd->value()));
 }
 

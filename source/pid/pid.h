@@ -9,11 +9,9 @@ class PID : public QObject
 public:
     explicit PID(float _kp,float _ki,float _kd,QObject *parent = nullptr);
 
-
+    void setTargetValue(float value){target=value;}
 
     float control(float actualValue);
-private:
-    float control(float targetValue, float actualValue);
 
 signals:
     void sendPidOutput(float u);

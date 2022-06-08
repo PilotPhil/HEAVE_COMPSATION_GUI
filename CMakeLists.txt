@@ -21,6 +21,7 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/source/ui
                     ${CMAKE_CURRENT_LIST_DIR}/source/imu
                     ${CMAKE_CURRENT_LIST_DIR}/source/plot
                     ${CMAKE_CURRENT_LIST_DIR}/source/pid
+                    ${CMAKE_CURRENT_LIST_DIR}/source/cfg
                     ${CMAKE_CURRENT_LIST_DIR}/source/motor
                     ${CMAKE_CURRENT_LIST_DIR}/source/plot/base
                     ${CMAKE_CURRENT_LIST_DIR}/source/plot/staticPlot

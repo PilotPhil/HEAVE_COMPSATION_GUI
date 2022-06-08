@@ -3,7 +3,10 @@
 PlotRealtimeCurve::PlotRealtimeCurve(QWidget *parent):
     PlotDynamicDraw(parent)
 {
-
+    timer=new QTimer(this);
+    timer->setInterval(20);
+    connect(timer,&QTimer::timeout,this,&PlotRealtimeCurve::update);
+    timer->start();
 }
 
 void PlotRealtimeCurve::makeCurves()
@@ -24,7 +27,7 @@ void PlotRealtimeCurve::makeGraph()
     setAxis(xAxis,axisPosition::atDown);
 
     AxisProp yAxis(QString::fromLocal8Bit("速度 [m/s]"),
-                   RangeProp(-5,5));
+                   RangeProp(-0.75,0.75));
     setAxis(yAxis,axisPosition::atLeft);
 
     showMainAxis(true);
@@ -37,20 +40,35 @@ void PlotRealtimeCurve::makeGraph()
     showLegend(true);
 
     //4.曲线
-    CurveProp curve_imu("IMU",QColor(87, 89, 91));
+    CurveProp curve_imu("IMU",QColor(255, 0, 0));
 //    curve_imu.scatterStyle=QCPScatterStyle((QCPScatterStyle::ScatterShape)2,1);
     addCurve(curve_imu);
+
+    CurveProp curve_motor("Motor",QColor(0, 0, 255));
+    curve_motor.lineStyle=QCPGraph::LineStyle(1);
+//    curve_motor.scatterStyle=QCPScatterStyle((QCPScatterStyle::ScatterShape)2,1);
+    addCurve(curve_motor);
 }
 
 void PlotRealtimeCurve::updateImuData(float value)
 {
-    if(canvas->graph(0)==nullptr)
+    imu_vel=value;
+}
+
+void PlotRealtimeCurve::updateMotorData(float value)
+{
+    motor_vel=value;
+}
+
+void PlotRealtimeCurve::update()
+{
+    if(canvas->graph(0)==nullptr || canvas->graph(1)==nullptr)
         return;
 
     static int i=0;
-    canvas->graph(0)->addData(i,value);
-    canvas->xAxis->setRange(i,500,Qt::AlignRight);
+    canvas->graph(0)->addData(i,-1*imu_vel);
+    canvas->graph(1)->addData(i,motor_vel);
+    canvas->xAxis->setRange(i,1000,Qt::AlignRight);
     canvas->replot();
-
     i++;
 }

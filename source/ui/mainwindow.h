@@ -32,6 +32,8 @@ private slots:
 
     void on_pushButton_cmdMotorDegree_clicked();
 
+    void on_pushButton_savePidCfg_clicked();
+
 private:
     Ui::MainWindow *ui;
 
@@ -46,5 +48,6 @@ private:
      * @brief scanPorts 扫描串口
      */
     void scanPorts();
+
 };
 #endif // MAINWINDOW_H

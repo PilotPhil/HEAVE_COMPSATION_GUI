@@ -8,10 +8,10 @@ PID::PID(float _kp, float _ki, float _kd, QObject *parent):
     e_pre = e;
 }
 
-float PID::control(float targetValue, float actualValue)
+float PID::control(float actualValue)
 {
     float u;
-    target = targetValue; //目标值
+//    target = targetValue; //目标值
     actual = actualValue; //真实值（传感器所测）
     e = target - actual;  // error误差
     integral += e;        //误差累积（积分）
@@ -20,9 +20,4 @@ float PID::control(float targetValue, float actualValue)
 
     emit sendPidOutput(u);
     return u;
-}
-
-float PID::control(float actualValue)
-{
-    return control(0,actualValue);
 }

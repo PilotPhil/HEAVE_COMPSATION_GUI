@@ -17,34 +17,64 @@ MotorDriver::MotorDriver(char _motorId,const QString &_portName, int _baudRate, 
 
         if(!flag)
         {
-            qDebug()<<QString::fromLocal8Bit("串口打开失败");
+            qDebug()<<QString::fromLocal8Bit("电机串口打开失败");
+        }
+        else
+        {
+            qDebug()<<QString::fromLocal8Bit("电机串口打开成功");
         }
     }
+
+    connect(serial,&QSerialPort::readyRead,this,[&]()
+    {
+        auto bytes=serial->readAll();
+
+        if(bytes.length()!=13)
+            return ;
+
+        auto vel=bytes.mid(8,2);
+        std::reverse(vel.begin(),vel.end());
+
+        auto jiaosudu=SignedHex2Int(vel);//角速度
+        auto xiansudu=jiaosudu*0.005/57.3;//线速度
+
+        qDebug()<<QString::fromLocal8Bit("电机角速度: ")<<jiaosudu<<" dps";
+        qDebug()<<QString::fromLocal8Bit("货物线速度: ")<<jiaosudu<<" m/s";
+
+        emit sendMotorVel(xiansudu);
+    });
 }
+
 
 MotorDriver::~MotorDriver()
 {
     cmdMotorStop();
 
     if(serial->isOpen())
+    {
         serial->close();
+        qDebug()<<QString::fromLocal8Bit("电机串口已关闭");
+    }
 }
 
 bool MotorDriver::cmdMotorOff()
 {
     auto cmd=motoOff();
+    qDebug()<<QString::fromLocal8Bit("电机关闭");
     return sendCommand(cmd);
 }
 
 bool MotorDriver::cmdMotorStop()
 {
     auto cmd=motoStop();
+    qDebug()<<QString::fromLocal8Bit("电机停止");
     return sendCommand(cmd);
 }
 
 bool MotorDriver::cmdMotorRun()
 {
     auto cmd=motoRun();
+    qDebug()<<QString::fromLocal8Bit("电机恢复");
     return sendCommand(cmd);
 }
 

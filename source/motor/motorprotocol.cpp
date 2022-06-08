@@ -51,21 +51,12 @@ QByteArray MotorProtocol::speedCloseLoopControl(int speed)
     char L=0x00;
     char LL=0x00;
 
-    if(speed>=0)
-    {
-        speed*=100;
 
-        L=speed>>8;
-        LL=speed&0xff;
-    }
-    else if(speed<0)
-    {
-        speed*=100;
-        HH=speed>>24;
-        H=(speed>>16)&0xFF;
-        L=(speed>>8)&0xFF;
-        LL=speed&0xFF;
-    }
+    speed*=100;
+    HH=speed>>24;
+    H=(speed>>16)&0xFF;
+    L=(speed>>8)&0xFF;
+    LL=speed&0xFF;
 
     QByteArray array;
 
