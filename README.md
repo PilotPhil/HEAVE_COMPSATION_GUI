@@ -17,15 +17,21 @@
 2. unzip
 3. just use
 
+#### 依赖库
+0. Qt
+1. [QCustomplot](https://www.qcustomplot.com/) [(download)](https://www.qcustomplot.com/index.php/download)
+
 #### 编译与开发
 0. cd ~
 1. git clone https://github.com/PilotPhil/HEAVE_COMPSATION_GUI.git
 2. cd HEAVE_COMPSATION_GUI
-3. mkdir build
-4. cd build
-5. cmake ..
-6. make -j16
-7. ./HEAVE_COMPSATION_GUI
+3. modify qcustomplot dir by your install path in CMakeLists.txt
+4. mkdir build
+5. cd build
+6. cmake ..
+7. make -j16
+8. ./HEAVE_COMPSATION_GUI
+
 
 #### 启动图标设置
 0. cd ~
