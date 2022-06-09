@@ -1,13 +1,15 @@
-# IceLoad_GUI
+# 升沉补偿系统
 
 #### 介绍
 江苏科技大学---极地海洋装备研究所
 
-冰载荷计算软件
+升沉补偿系统
 
 #### 软件架构
-界面：Qt Widgets
-计算程序：matlab导出
+- 硬件：IMU、低速高扭伺服电机
+- 软件：Qt widgets
+- 算法：pid速度控制
+
 
 
 #### 安装教程
@@ -15,62 +17,52 @@
 2. unzip
 3. just use
 
-#### 从源码编译
-1. 安装[matlab runtime](https://ww2.mathworks.cn/products/compiler/matlab-runtime.html) R2018b 64-bit
-2. 下载[eigen库](https://gitlab.com/libeigen/eigen/-/releases/3.4.0)
-3. 下载[IceLoad_GUI源码](https://gitee.com/pilot12138/ice-load_-gui)
-4. 安装matlab runtime并将
+#### 编译与开发
+0. cd ~
+1. git clone https://github.com/PilotPhil/HEAVE_COMPSATION_GUI.git
+2. cd HEAVE_COMPSATION_GUI
+3. mkdir build
+4. cd build
+5. cmake ..
+6. make -j16
+7. ./HEAVE_COMPSATION_GUI
+
+#### 启动图标设置
+0. cd ~
+1. cd HEAVE_COMPSATION_GUI/build
+2. touch run.sh
+   ```
+    sudo chmod 666 /dev/ttyUSB0
+    sudo chmod 666 /dev/ttyCH343USB0
+    ./HEAVE_COMPENSATION
+   ```
+3. cd ~/Desktop
+4. touch HEAVE_COMPSATION.desktop
     ```
-    C:\Program Files\MATLAB\MATLAB Runtime\v95\extern\include
-    C:\Program Files\MATLAB\MATLAB Runtime\v95\bin\win64
+    [Desktop Entry]
+    Encoding=UTF-8
+    Version=1.0
+    Type=Application
+    Name=heave control
+    Path=/home/calajv/HEAVE_COMPSATION_GUI/build
+    Exec=/home/calajv/HEAVE_COMPSATION_GUI/build/run.sh
+    Icon=/home/calajv/HEAVE_COMPSATION_GUI-main/icons/control.png
+    Categories=Application
+    Terminal=false
+    StartupWMClass=heave;
     ```
-    添加到环境变量path
+5. double click and run
 
-5. 执行`build.bat`
-```bat
-::1.mkdir
-mkdir mybuild
-cd mybuild
-
-::2.cmake gen mingw makefile
-cmake ..^
- -G "MinGW Makefiles"^
- -DCMAKE_BUILD_TYPE=Debug
-
-::3.make
-mingw32-make -j16
-
-::4.test
-IceLoadGUI.exe
-```
-
-#### 发布
-```bat
-::1.mkdir
-mkdir myrelease
-cd myrelease
-mkdir bin
-
-::2.cmake gen mingw makefile
-cmake ..^
- -G "MinGW Makefiles"^
- -DCMAKE_BUILD_TYPE=Release^
- -DEXECUTABLE_OUTPUT_PATH=bin
-
-::3.make
-mingw32-make -j16
-
-::4.deploy
-cd bin
-windeployqt IceLoadGUI.exe --release
-
-::5.test
-IceLoadGUI.exe
-```
+#### 效果演示
+- 视频
+[演示(BiliBili)](https://www.bilibili.com/video/BV1xt4y1H7EQ?share_source=copy_web)
+- 图片
+![](pic/Snipaste_2022-06-09_09-29-44.png)
+![](pic/Snipaste_2022-06-09_09-30-37.png)
+![](pic/Snipaste_2022-06-09_09-32-25.png)
 
 #### 参与贡献
-1. 计算主程序：顾等
-2. GUI：pilot.phil
-
+1. GUI框架实现：Pilot.Phil
+2. 机械结构硬件部分：Liu、Ma等
 
 
