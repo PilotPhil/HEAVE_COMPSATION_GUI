@@ -1,4 +1,5 @@
 ﻿#include "imudriver.h"
+#include "util.h"
 
 ImuDriver::ImuDriver(const QString& _portName,int _baudRate,QObject *parent):QObject(parent)
 {
@@ -17,13 +18,14 @@ ImuDriver::ImuDriver(const QString& _portName,int _baudRate,QObject *parent):QOb
         if(flag)
         {
             qDebug()<<QString::fromLocal8Bit("IMU串口打开成功");
-            connect(serial,&QSerialPort::readyRead,this,&ImuDriver::parseVelocity);
         }
         else
         {
             qDebug()<<QString::fromLocal8Bit("IMU串口打开失败");
         }
     }
+
+    start();
 }
 
 ImuDriver::~ImuDriver()
@@ -33,6 +35,16 @@ ImuDriver::~ImuDriver()
         serial->close();
         qDebug()<<QString::fromLocal8Bit("IMU串口已关闭");
     }
+}
+
+void ImuDriver::start()
+{
+    connect(serial,&QSerialPort::readyRead,this,&ImuDriver::parseVelocity);
+}
+
+void ImuDriver::stop()
+{
+    disconnect(serial,&QSerialPort::readyRead,this,&ImuDriver::parseVelocity);
 }
 
 void ImuDriver::parseVelocity()
@@ -70,34 +82,6 @@ void ImuDriver::parseVelocity()
     std::reverse(vel_z.begin(),vel_z.end());
     velZ=byte2float(vel_z);
 
-    qDebug()<<QString::fromLocal8Bit("IMU速度: ")<<velZ<<" m/s";
-
-    emit sendVelocityZ(velZ);
+//    qDebug()<<QString::fromLocal8Bit("IMU速度: ")<<velZ<<" m/s";
 }
-
-QString ImuDriver::toHexadecimal(const QByteArray &byteArray)
-{
-    QString str;
-    for(int i = 0; i< byteArray.length(); i++){
-        QString byteStr = QString::number(static_cast<uchar>(byteArray[i]), 16);
-        if(byteStr.length() == 1) str += "0" + byteStr;
-        else str += byteStr;
-    }
-    qDebug()<<str;
-    return str;
-}
-
-float ImuDriver::byte2float(QByteArray &byte)
-{
-    float result = 0;
-    int size = byte.size();
-    char* data_char = byte.data();
-    char* p = (char*)&result;
-    for(int index = 0; index < size; index++)
-    {
-        *(p + index) = *(data_char + size - 1 - index);
-    }
-    return result;
-}
-
 

@@ -5,7 +5,6 @@
 #include <QDebug>
 #include <QtSerialPort/QSerialPort>
 
-
 class ImuDriver : public QObject
 {
     Q_OBJECT
@@ -15,41 +14,36 @@ public:
     ~ImuDriver();
 
     /**
+     * @brief getVelZ 获取Z轴速度
+     * @return
+     */
+    float getVelZ() const {return velZ;}
+
+    /**
+     * @brief start imu开始读取
+     */
+    void start();
+
+    /**
+     * @brief stop imu停止读取
+     */
+    void stop();
+
+signals:
+
+private:
+    QSerialPort* serial;
+
+
+    /**
      * @brief parseVelocity 解析速度
      */
     void parseVelocity();
 
     /**
-     * @brief getVelZ 获取速度
-     * @return
-     */
-    float getVelZ() const { return velZ; }
-
-signals:
-    void sendVelocityZ(float vel);
-
-private:
-    QSerialPort* serial;
-
-    /**
-     * @brief Byte2Float 转浮点数
-     * @param byte
-     * @return
-     */
-    float byte2float(QByteArray& byte);
-
-    /**
-     * @brief toHexadecimal 转为十六进制字符串
-     * @param byteArray
-     * @return
-     */
-    QString toHexadecimal(const QByteArray &byteArray);
-
-    /**
      * @brief vel_z Z轴速度
      */
     float velZ=0;
-
 };
 
 #endif // IMUDRIVER_H

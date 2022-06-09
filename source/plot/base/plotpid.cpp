@@ -1,16 +1,16 @@
-﻿#include "plotrealtimecurve.h"
+﻿#include "plotpid.h"
 
-PlotRealtimeCurve::PlotRealtimeCurve(QWidget *parent):
+PlotPid::PlotPid(QWidget *parent):
     PlotDynamicDraw(parent)
 {
 }
 
-void PlotRealtimeCurve::makeCurves()
+void PlotPid::makeCurves()
 {
+
 }
 
-
-void PlotRealtimeCurve::makeGraph()
+void PlotPid::makeGraph()
 {
     //1.标题
 //    TitleProp t(QString::fromLocal8Bit(""),
@@ -36,24 +36,27 @@ void PlotRealtimeCurve::makeGraph()
     showLegend(true);
 
     //4.曲线
-    CurveProp curve_imu("IMU",QColor(255, 0, 0));
-//    curve_imu.scatterStyle=QCPScatterStyle((QCPScatterStyle::ScatterShape)2,1);
-    addCurve(curve_imu);
+    CurveProp curve_actual(QString::fromLocal8Bit("货物速度"),QColor(255, 0, 0));
+    curve_actual.scatterStyle=QCPScatterStyle((QCPScatterStyle::ScatterShape)2,1);
+    addCurve(curve_actual);
 
-    CurveProp curve_motor("Motor",QColor(0, 0, 255));
-    curve_motor.lineStyle=QCPGraph::LineStyle(1);
-//    curve_motor.scatterStyle=QCPScatterStyle((QCPScatterStyle::ScatterShape)2,1);
-    addCurve(curve_motor);
+//    CurveProp curve_error(QString::fromLocal8Bit("误差"),QColor(0, 0, 255));
+//    curve_error.lineStyle=QCPGraph::LineStyle(1);
+    //    addCurve(curve_error);
 }
 
-void PlotRealtimeCurve::update(float vel_imu, float vel_motor)
+void PlotPid::update(float actual)
 {
-    if(canvas->graph(0)==nullptr || canvas->graph(1)==nullptr)
-        return;
+    auto speed=actual;
+    if(speed<1 && speed>-1)
+    {
+        qDebug()<<"got it......................................................................."<<speed;
+    }
 
+    if(canvas->graph(0)==nullptr)
+        return;
     static int i=0;
-    canvas->graph(0)->addData(i,-1*vel_imu);
-    canvas->graph(1)->addData(i,vel_motor);
+    canvas->graph(0)->addData(i,actual);
     canvas->xAxis->setRange(i,1000,Qt::AlignRight);
     canvas->replot();
     i++;

@@ -6,6 +6,8 @@
 #include "imudriver.h"
 #include "pid.h"
 #include "plotrealtimecurve.h"
+#include "plotpid.h"
+#include <QTimer>
 
 #include <QtSerialPort/QSerialPortInfo>
 
@@ -43,11 +45,16 @@ private:
 
     PlotRealtimeCurve* plot;
 
+    PlotPid* plot2;
+
 
     /**
      * @brief scanPorts 扫描串口
      */
     void scanPorts();
 
+    QTimer* timer;
+
+    void loop();
 };
 #endif // MAINWINDOW_H

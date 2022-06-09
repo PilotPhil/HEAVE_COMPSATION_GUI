@@ -21,11 +21,22 @@ MainWindow::MainWindow(QWidget *parent)
     gl1->addWidget(plot);
     ui->frame->setLayout(gl1);
 
+    plot2=new PlotPid(this);
+    plot2->makeGraph();
+    QGridLayout* gl2=new QGridLayout(this);
+    gl2->setMargin(0);
+    gl2->addWidget(plot2);
+    ui->frame_2->setLayout(gl2);
+
     scanPorts();
 
     ui->spinBox_kp->setValue(IniBase::GetInstance()->getValue("pid/kp").toInt());
     ui->spinBox_ki->setValue(IniBase::GetInstance()->getValue("pid/ki").toInt());
     ui->spinBox_kd->setValue(IniBase::GetInstance()->getValue("pid/kd").toInt());
+
+    timer=new QTimer(this);
+    timer->setInterval(25);
+    connect(timer,&QTimer::timeout,this,&MainWindow::loop);
 }
 
 MainWindow::~MainWindow()
@@ -39,25 +50,24 @@ void MainWindow::on_checkBox_serialSwitch_clicked(bool checked)
 {
     if(checked)
     {
-        imu=new ImuDriver(ui->comboBox_imuPort->currentText(),ui->comboBox_imuBaudrate->currentText().toUInt(),this);
-        motor=new MotorDriver(0x01,ui->comboBox_motorPort->currentText(),ui->comboBox_motorBaudrate->currentText().toUInt(),this);
-        pid=new PID(ui->spinBox_kp->value(),ui->spinBox_ki->value(),ui->spinBox_kd->value(),this);
+        imu=new ImuDriver(ui->comboBox_imuPort->currentText(),
+                          ui->comboBox_imuBaudrate->currentText().toUInt(),this);
 
-        connect(imu,&ImuDriver::sendVelocityZ,plot,&PlotRealtimeCurve::updateImuData);
-        connect(motor,&MotorDriver::sendMotorVel,plot,&PlotRealtimeCurve::updateMotorData);
+        motor=new MotorDriver(0x01,
+                              ui->comboBox_motorPort->currentText(),
+                              ui->comboBox_motorBaudrate->currentText().toUInt(),this);
+
+        pid=new PID(ui->spinBox_kp->value(),
+                    ui->spinBox_ki->value(),
+                    ui->spinBox_kd->value(),this);
     }
     else
     {
-        if(motor!=nullptr)
-            delete motor;
-        if(imu!=nullptr)
-            delete imu;
-        if(pid!=nullptr)
-            delete pid;
+        if(motor!=nullptr)delete motor;
+        if(imu!=nullptr)delete imu;
+        if(pid!=nullptr)delete pid;
 
-        motor=nullptr;
-        pid=nullptr;
-        imu=nullptr;
+        motor=nullptr;pid=nullptr;imu=nullptr;
     }
 }
 
@@ -66,20 +76,15 @@ void MainWindow::on_checkBox_controlSwitch_clicked(bool checked)
 {
     if(checked)
     {
-        pid=new PID(ui->spinBox_kp->value(),ui->spinBox_ki->value(),ui->spinBox_kd->value(),this);
+        pid->setPid(ui->spinBox_kp->value(),
+                    ui->spinBox_ki->value(),
+                    ui->spinBox_kd->value());
 
-        connect(imu,&ImuDriver::sendVelocityZ,pid,&PID::control);
-        connect(pid,&PID::sendPidOutput,motor,&MotorDriver::cmdSpeedCloseLoopControl);
+        timer->start();
     }
     else
     {
-        disconnect(imu,&ImuDriver::sendVelocityZ,pid,&PID::control);
-        disconnect(pid,&PID::sendPidOutput,motor,&MotorDriver::cmdSpeedCloseLoopControl);
-
-        if(pid!=nullptr)
-        {
-            delete pid;
-        }
+        timer->stop();
     }
 
     if(motor!=nullptr)
@@ -87,7 +92,6 @@ void MainWindow::on_checkBox_controlSwitch_clicked(bool checked)
         motor->cmdMotorStop();
     }
 }
-
 
 void MainWindow::scanPorts()
 {
@@ -103,6 +107,19 @@ void MainWindow::scanPorts()
     }
 }
 
+void MainWindow::loop()
+{
+    auto vel_imu=imu->getVelZ();
+    auto vel_motor=motor->getMotorV();
+    auto speed=pid->control(0,vel_imu);
+
+    if(speed<10 && speed>-10)
+        speed=0;
+
+    motor->cmdSpeedCloseLoopControl(speed);
+    plot->update(vel_imu,vel_motor);
+    plot2->update(vel_imu+vel_motor);
+}
 
 void MainWindow::on_checkBox_stopMotor_clicked()
 {
@@ -111,7 +128,6 @@ void MainWindow::on_checkBox_stopMotor_clicked()
         motor->cmdMotorStop();
     }
 }
-
 
 void MainWindow::on_pushButton_cmdMotorSpeed_clicked()
 {
@@ -124,7 +140,6 @@ void MainWindow::on_pushButton_cmdMotorSpeed_clicked()
     motor->cmdSpeedCloseLoopControl(speed);
 }
 
-
 void MainWindow::on_pushButton_cmdMotorDegree_clicked()
 {
     if(motor==nullptr)
@@ -135,7 +150,6 @@ void MainWindow::on_pushButton_cmdMotorDegree_clicked()
     auto speed=flag*ui->spinBox_degree->value();
 //    motor->cmdSpeedCloseLoopControl(speed);
 }
-
 
 void MainWindow::on_pushButton_savePidCfg_clicked()
 {

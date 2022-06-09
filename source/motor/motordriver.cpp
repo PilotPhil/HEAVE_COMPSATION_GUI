@@ -1,4 +1,5 @@
 ﻿#include "motordriver.h"
+#include "util.h"
 
 MotorDriver::MotorDriver(char _motorId,const QString &_portName, int _baudRate, QObject *parent):MotorProtocol(_motorId,parent)
 {
@@ -25,26 +26,8 @@ MotorDriver::MotorDriver(char _motorId,const QString &_portName, int _baudRate, 
         }
     }
 
-    connect(serial,&QSerialPort::readyRead,this,[&]()
-    {
-        auto bytes=serial->readAll();
-
-        if(bytes.length()!=13)
-            return ;
-
-        auto vel=bytes.mid(8,2);
-        std::reverse(vel.begin(),vel.end());
-
-        auto jiaosudu=SignedHex2Int(vel);//角速度
-        auto xiansudu=jiaosudu*0.005/57.3;//线速度
-
-        qDebug()<<QString::fromLocal8Bit("电机角速度: ")<<jiaosudu<<" dps";
-        qDebug()<<QString::fromLocal8Bit("货物线速度: ")<<jiaosudu<<" m/s";
-
-        emit sendMotorVel(xiansudu);
-    });
+    connect(serial,&QSerialPort::readyRead,this,&MotorDriver::parseMotorVel);
 }
-
 
 MotorDriver::~MotorDriver()
 {
@@ -81,6 +64,10 @@ bool MotorDriver::cmdMotorRun()
 bool MotorDriver::cmdSpeedCloseLoopControl(int speed)
 {
     auto cmd=speedCloseLoopControl(speed);
+
+    qDebug()<<"speed: "<<speed;
+//    qDebug()<<"cmd: "<<toHexadecimal(cmd);
+
     return sendCommand(cmd);
 }
 
@@ -95,4 +82,23 @@ bool MotorDriver::sendCommand(const QByteArray &cmd)
         return false;
 
     return true;
+}
+
+void MotorDriver::parseMotorVel()
+{
+    auto bytes=serial->readAll();
+
+    if(bytes.length()!=13)
+        return ;
+
+    auto vel=bytes.mid(8,2);
+    std::reverse(vel.begin(),vel.end());
+
+    auto jiaosudu=SignedHex2Int(vel);//角速度
+    auto xiansudu=jiaosudu*0.0275/57.3;//线速度
+
+//    qDebug()<<QString::fromLocal8Bit("电机角速度: ")<<jiaosudu<<" dps";
+//    qDebug()<<QString::fromLocal8Bit("货物线速度: ")<<xiansudu<<" m/s";
+
+    motorV=xiansudu;
 }

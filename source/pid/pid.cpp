@@ -1,4 +1,5 @@
 ﻿#include "pid.h"
+#include <QDebug>
 
 
 PID::PID(float _kp, float _ki, float _kd, QObject *parent):
@@ -6,18 +7,26 @@ PID::PID(float _kp, float _ki, float _kd, QObject *parent):
 {
     e = target - actual;
     e_pre = e;
+
 }
 
-float PID::control(float actualValue)
+void PID::setPid(float p, float i, float d)
 {
-    float u;
-//    target = targetValue; //目标值
-    actual = actualValue; //真实值（传感器所测）
+    kp=p;
+    ki=i;
+    kd=d;
+}
+
+float PID::control(float _target, float _actual)
+{
+    float u=0;
+    target=_target;
+    actual=_actual;
+
     e = target - actual;  // error误差
     integral += e;        //误差累积（积分）
     u = kp * e + ki * integral + kd * (e - e_pre); // pid核心
     e_pre = e;                                     //
-
-    emit sendPidOutput(u);
     return u;
 }
+
