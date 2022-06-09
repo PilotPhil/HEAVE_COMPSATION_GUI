@@ -1,0 +1,18 @@
+<launch>
+  <node pkg="imu" name="ahrs_driver" type="ahrs_driver" output="screen" >
+    <!-- 串口号 -->
+    <param name="port"  value="/dev/ttyCH343USB0"/>
+
+    <!-- 波特率 -->
+    <param name="baud"  value="921600"/>
+
+    <!-- 发布的速度话题名 -->
+    <param name="vel_topic"  value="/vel"/>
+
+    <!-- 发布的数据基于不同设备有不同的坐标系   -->
+    <param name="device_type"  value="1"/> <!-- 0: origin_data, 1: for single imu or ucar in ROS, 2:for Xiao in ROS -->
+  </node>
+
+  <!-- 启动rqt plot 并显示Z轴速度曲线 -->
+  <node pkg="rqt_plot"  name="rqt_plot" type="rqt_plot" arg="/vel/vel_z"/>
+</launch> 

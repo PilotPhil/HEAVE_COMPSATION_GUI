@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- 参数 -->
+    <arg name="imu_port" default="/dev/ttyCH343USB0" />
+    <arg name="imu_baud" default="921600" />
+
+    <arg name="motor_port" default="/dev/ttyUSB0" />
+    <arg name="motor_baud" default="115200" />
+
+    <arg name="imu_vel_topic" default="/imu/vel" />
+    <arg name="pid_control_topic" default="/pid_output" />
+
+    <!-- imu节点 -->
+    <node pkg="imu" type="imu" name="imu" output="log">
+        <param name="port" value="$(arg imu_port)" />
+        <param name="baud" value="$(arg imu_baud)" />
+        <param name="pub_topic" value="$(arg imu_vel_topic)" />
+        <param name="device_type" value="1" />
+        <!-- 0: origin_data, 1: for single imu or ucar in ROS, 2:for Xiao in ROS -->
+    </node>
+
+    <!-- 控制节点 -->
+    <node pkg="control_algorithm" type="pid" name="pid" output="screen" respawn="false" respawn_delay="1">
+        <param name="kp" value="200000" type="double"/>
+        <param name="ki" value="1" type="double"/>
+        <param name="kd" value="1" type="double"/>
+        <param name="sub_topic" value="$(arg imu_vel_topic)" />
+        <param name="pub_topic" value="$(arg pid_control_topic)" />
+    </node>
+
+    <!-- 电机节点 -->
+    <node pkg="motor_driver" type="motor" name="motor" output="screen" respawn="false" respawn_delay="1">
+        <param name="port" value="$(arg motor_port)" />
+        <param name="baud" value="$(arg motor_baud)" />
+        <param name="sub_topic" value="$(arg pid_control_topic)" />
+    </node>
+</launch>
