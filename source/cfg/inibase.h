@@ -2,31 +2,28 @@
 #define INIBASE_H
 
 #include <QObject>
-
 #include <QSettings>
 
-class IniBase : public QObject
-{
-    Q_OBJECT
-public:
-    static IniBase* m_Instance;
-    static IniBase* GetInstance();
+class IniBase : public QObject {
+  Q_OBJECT
+ public:
+  static IniBase* m_Instance;
+  static IniBase* GetInstance();
 
-    QString getValue(const QString& key);
+  QString getValue(const QString& key);
 
-    void setValue(const QString& key,const QString& value);
+  void setValue(const QString& key, const QString& value);
 
-private:
-    explicit IniBase(QObject *parent = nullptr);
+ private:
+  explicit IniBase(QObject* parent = nullptr);
 
-    ~IniBase();
+  ~IniBase();
 
-    QString iniPath;
+  QString iniPath;
 
-    QSettings* qsetting;
+  QSettings* qsetting;
 
-signals:
-
+ signals:
 };
 
-#endif // INIBASE_H
+#endif  // INIBASE_H

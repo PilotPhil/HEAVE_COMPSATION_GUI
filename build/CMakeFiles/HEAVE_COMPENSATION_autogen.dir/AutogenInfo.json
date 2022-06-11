@@ -1,0 +1,425 @@
+{
+	"BUILD_DIR" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen",
+	"CMAKE_BINARY_DIR" : "D:/Code/HEAVE_COMPSATION_GUI/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/Code/HEAVE_COMPSATION_GUI/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Code/HEAVE_COMPSATION_GUI",
+	"CMAKE_EXECUTABLE" : "D:/ProgramFiles/cmake/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"D:/Code/HEAVE_COMPSATION_GUI/CMakeLists.txt",
+		"D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/3.23.2/CMakeSystem.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake",
+		"D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeGenericSystem.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/Platform/Windows.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeCXXInformation.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/Compiler/MSVC-CXX.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/Platform/Windows-MSVC-CXX.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/Platform/Windows-MSVC.cmake",
+		"D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/3.23.2/CMakeRCCompiler.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeRCInformation.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeParseArguments.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"D:/ProgramFiles/cmake/share/cmake-3.23/Modules/CMakeParseArguments.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/cmake/Qt5PrintSupport/Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/res/res.qrc"
+	],
+	"CMAKE_SOURCE_DIR" : "D:/Code/HEAVE_COMPSATION_GUI",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/cfg/inibase.h",
+			"MU",
+			"BMQDIEWVHO/moc_inibase.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/imu/imudriver.h",
+			"MU",
+			"7ZL4N7IYFL/moc_imudriver.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/motor/motordriver.h",
+			"MU",
+			"KHI3GTHBG4/moc_motordriver.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/motor/motorprotocol.h",
+			"MU",
+			"KHI3GTHBG4/moc_motorprotocol.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/pid/pid.h",
+			"MU",
+			"PEFZTB6SVR/moc_pid.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotdynamicdraw.h",
+			"MU",
+			"ZONE53FMIS/moc_plotdynamicdraw.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotelements.h",
+			"MU",
+			"ZONE53FMIS/moc_plotelements.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotinterication.h",
+			"MU",
+			"ZONE53FMIS/moc_plotinterication.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotlayout.h",
+			"MU",
+			"ZONE53FMIS/moc_plotlayout.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotpid.h",
+			"MU",
+			"ZONE53FMIS/moc_plotpid.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotrealtimecurve.h",
+			"MU",
+			"ZONE53FMIS/moc_plotrealtimecurve.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotstaticdraw.h",
+			"MU",
+			"ZONE53FMIS/moc_plotstaticdraw.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dialog/setaxis.h",
+			"MU",
+			"ZRUSROVWUQ/moc_setaxis.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dialog/setcurve.h",
+			"MU",
+			"ZRUSROVWUQ/moc_setcurve.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dialog/setplot.h",
+			"MU",
+			"ZRUSROVWUQ/moc_setplot.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dialog/setprint.h",
+			"MU",
+			"ZRUSROVWUQ/moc_setprint.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/axisprop.h",
+			"MU",
+			"JRF5NQQH6V/moc_axisprop.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/curveprop.h",
+			"MU",
+			"JRF5NQQH6V/moc_curveprop.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/plotprop.h",
+			"MU",
+			"JRF5NQQH6V/moc_plotprop.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/point.h",
+			"MU",
+			"JRF5NQQH6V/moc_point.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/printprop.h",
+			"MU",
+			"JRF5NQQH6V/moc_printprop.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/rangeprop.h",
+			"MU",
+			"JRF5NQQH6V/moc_rangeprop.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/titleprop.h",
+			"MU",
+			"JRF5NQQH6V/moc_titleprop.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/ui/mainwindow.h",
+			"MU",
+			"HDSICPREIZ/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/ui/util.h",
+			"MU",
+			"HDSICPREIZ/moc_util.cpp",
+			null
+		],
+		[
+			"D:/ProgramFiles/Develop/QCustomPlot/qcustomplot.h",
+			"MU",
+			"RZZLTRS7GO/moc_qcustomplot.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/include",
+	"INCLUDE_DIR_Debug" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/include_Debug",
+	"INCLUDE_DIR_MinSizeRel" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/include_MinSizeRel",
+	"INCLUDE_DIR_RelWithDebInfo" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/include_Release",
+	"MOC_COMPILATION_FILE" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/mocs_compilation.cpp",
+	"MOC_COMPILATION_FILE_Debug" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/mocs_compilation_Debug.cpp",
+	"MOC_COMPILATION_FILE_MinSizeRel" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/mocs_compilation_MinSizeRel.cpp",
+	"MOC_COMPILATION_FILE_RelWithDebInfo" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/mocs_compilation_RelWithDebInfo.cpp",
+	"MOC_COMPILATION_FILE_Release" : "D:/Code/HEAVE_COMPSATION_GUI/build/HEAVE_COMPENSATION_autogen/mocs_compilation_Release.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_PRINTSUPPORT_LIB",
+		"QT_SERIALPORT_LIB",
+		"QT_WIDGETS_LIB",
+		"WIN32"
+	],
+	"MOC_DEFINITIONS_Debug" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_PRINTSUPPORT_LIB",
+		"QT_SERIALPORT_LIB",
+		"QT_WIDGETS_LIB",
+		"WIN32"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"D:/Code/HEAVE_COMPSATION_GUI/build",
+		"D:/Code/HEAVE_COMPSATION_GUI",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/ui",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/imu",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/plot",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/pid",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/cfg",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/motor",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/plot/staticPlot",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dynamicPlot",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dialog",
+		"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop",
+		"D:/ProgramFiles/Develop/QCustomPlot",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/include",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/include/QtWidgets",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/include/QtGui",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/include/QtANGLE",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/include/QtCore",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/mkspecs/win32-msvc",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/include/QtSerialPort",
+		"C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/include/QtPrintSupport"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : [],
+	"MOC_PREDEFS_FILE" : "",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : true,
+	"PARALLEL" : 12,
+	"PARSE_CACHE_FILE" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_Debug" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/ParseCache_Debug.txt",
+	"PARSE_CACHE_FILE_MinSizeRel" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/ParseCache_MinSizeRel.txt",
+	"PARSE_CACHE_FILE_RelWithDebInfo" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/ParseCache_RelWithDebInfo.txt",
+	"PARSE_CACHE_FILE_Release" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/ParseCache_Release.txt",
+	"QT_MOC_EXECUTABLE" : "C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 12,
+	"SETTINGS_FILE" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_Debug" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/AutogenUsed_Debug.txt",
+	"SETTINGS_FILE_MinSizeRel" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/AutogenUsed_MinSizeRel.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/HEAVE_COMPENSATION_autogen.dir/AutogenUsed_Release.txt",
+	"SOURCES" : 
+	[
+		[ "D:/Code/HEAVE_COMPSATION_GUI/source/cfg/inibase.cpp", "MU", null ],
+		[ "D:/Code/HEAVE_COMPSATION_GUI/source/imu/imudriver.cpp", "MU", null ],
+		[ "D:/Code/HEAVE_COMPSATION_GUI/source/main.cpp", "MU", null ],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/motor/motordriver.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/motor/motorprotocol.cpp",
+			"MU",
+			null
+		],
+		[ "D:/Code/HEAVE_COMPSATION_GUI/source/pid/pid.cpp", "MU", null ],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotdynamicdraw.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotelements.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotinterication.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotlayout.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotpid.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotrealtimecurve.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/base/plotstaticdraw.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dialog/setaxis.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dialog/setcurve.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dialog/setplot.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/dialog/setprint.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/axisprop.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/curveprop.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/plotprop.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/printprop.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/rangeprop.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/HEAVE_COMPSATION_GUI/source/plot/prop/titleprop.cpp",
+			"MU",
+			null
+		],
+		[ "D:/Code/HEAVE_COMPSATION_GUI/source/ui/mainwindow.cpp", "MU", null ],
+		[ "D:/Code/HEAVE_COMPSATION_GUI/source/ui/util.cpp", "MU", null ],
+		[ "D:/ProgramFiles/Develop/QCustomPlot/qcustomplot.cpp", "MU", null ]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3BD8A7F8-C40A-392F-8CAE-6AF78B92EAB8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Code\HEAVE_COMPSATION_GUI\build;D:\Code\HEAVE_COMPSATION_GUI;D:\Code\HEAVE_COMPSATION_GUI\source\ui;D:\Code\HEAVE_COMPSATION_GUI\source\imu;D:\Code\HEAVE_COMPSATION_GUI\source\plot;D:\Code\HEAVE_COMPSATION_GUI\source\pid;D:\Code\HEAVE_COMPSATION_GUI\source\cfg;D:\Code\HEAVE_COMPSATION_GUI\source\motor;D:\Code\HEAVE_COMPSATION_GUI\source\plot\base;D:\Code\HEAVE_COMPSATION_GUI\source\plot\staticPlot;D:\Code\HEAVE_COMPSATION_GUI\source\plot\dynamicPlot;D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog;D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop;D:\ProgramFiles\Develop\QCustomPlot;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Code\HEAVE_COMPSATION_GUI\build;D:\Code\HEAVE_COMPSATION_GUI;D:\Code\HEAVE_COMPSATION_GUI\source\ui;D:\Code\HEAVE_COMPSATION_GUI\source\imu;D:\Code\HEAVE_COMPSATION_GUI\source\plot;D:\Code\HEAVE_COMPSATION_GUI\source\pid;D:\Code\HEAVE_COMPSATION_GUI\source\cfg;D:\Code\HEAVE_COMPSATION_GUI\source\motor;D:\Code\HEAVE_COMPSATION_GUI\source\plot\base;D:\Code\HEAVE_COMPSATION_GUI\source\plot\staticPlot;D:\Code\HEAVE_COMPSATION_GUI\source\plot\dynamicPlot;D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog;D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop;D:\ProgramFiles\Develop\QCustomPlot;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Code\HEAVE_COMPSATION_GUI\build;D:\Code\HEAVE_COMPSATION_GUI;D:\Code\HEAVE_COMPSATION_GUI\source\ui;D:\Code\HEAVE_COMPSATION_GUI\source\imu;D:\Code\HEAVE_COMPSATION_GUI\source\plot;D:\Code\HEAVE_COMPSATION_GUI\source\pid;D:\Code\HEAVE_COMPSATION_GUI\source\cfg;D:\Code\HEAVE_COMPSATION_GUI\source\motor;D:\Code\HEAVE_COMPSATION_GUI\source\plot\base;D:\Code\HEAVE_COMPSATION_GUI\source\plot\staticPlot;D:\Code\HEAVE_COMPSATION_GUI\source\plot\dynamicPlot;D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog;D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop;D:\ProgramFiles\Develop\QCustomPlot;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Code\HEAVE_COMPSATION_GUI\build;D:\Code\HEAVE_COMPSATION_GUI;D:\Code\HEAVE_COMPSATION_GUI\source\ui;D:\Code\HEAVE_COMPSATION_GUI\source\imu;D:\Code\HEAVE_COMPSATION_GUI\source\plot;D:\Code\HEAVE_COMPSATION_GUI\source\pid;D:\Code\HEAVE_COMPSATION_GUI\source\cfg;D:\Code\HEAVE_COMPSATION_GUI\source\motor;D:\Code\HEAVE_COMPSATION_GUI\source\plot\base;D:\Code\HEAVE_COMPSATION_GUI\source\plot\staticPlot;D:\Code\HEAVE_COMPSATION_GUI\source\plot\dynamicPlot;D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog;D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop;D:\ProgramFiles\Develop\QCustomPlot;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Code\HEAVE_COMPSATION_GUI\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Code/HEAVE_COMPSATION_GUI/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\ProgramFiles\cmake\bin\cmake.exe -SD:/Code/HEAVE_COMPSATION_GUI -BD:/Code/HEAVE_COMPSATION_GUI/build --check-stamp-file D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5Config.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5ConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5ModuleLocation.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5SerialPort\Qt5SerialPortConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5SerialPort\Qt5SerialPortConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeCXXCompiler.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeRCCompiler.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeSystem.cmake;D:\Code\HEAVE_COMPSATION_GUI\source\res\res.qrc;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Code/HEAVE_COMPSATION_GUI/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\ProgramFiles\cmake\bin\cmake.exe -SD:/Code/HEAVE_COMPSATION_GUI -BD:/Code/HEAVE_COMPSATION_GUI/build --check-stamp-file D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5Config.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5ConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5ModuleLocation.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5SerialPort\Qt5SerialPortConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5SerialPort\Qt5SerialPortConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeCXXCompiler.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeRCCompiler.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeSystem.cmake;D:\Code\HEAVE_COMPSATION_GUI\source\res\res.qrc;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Code/HEAVE_COMPSATION_GUI/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\ProgramFiles\cmake\bin\cmake.exe -SD:/Code/HEAVE_COMPSATION_GUI -BD:/Code/HEAVE_COMPSATION_GUI/build --check-stamp-file D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5Config.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5ConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5ModuleLocation.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5SerialPort\Qt5SerialPortConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5SerialPort\Qt5SerialPortConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeCXXCompiler.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeRCCompiler.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeSystem.cmake;D:\Code\HEAVE_COMPSATION_GUI\source\res\res.qrc;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Code/HEAVE_COMPSATION_GUI/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\ProgramFiles\cmake\bin\cmake.exe -SD:/Code/HEAVE_COMPSATION_GUI -BD:/Code/HEAVE_COMPSATION_GUI/build --check-stamp-file D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5Config.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5ConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5\Qt5ModuleLocation.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5SerialPort\Qt5SerialPortConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5SerialPort\Qt5SerialPortConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeCXXCompiler.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeRCCompiler.cmake;D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\3.23.2\CMakeSystem.cmake;D:\Code\HEAVE_COMPSATION_GUI\source\res\res.qrc;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeParseArguments.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\Windows.cmake;D:\ProgramFiles\cmake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Code\HEAVE_COMPSATION_GUI\build\ZERO_CHECK.vcxproj">
+      <Project>{0F6C3EF0-869E-37CE-9508-14CA97B46609}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION.vcxproj">
+      <Project>{1D87B8A1-4DE8-3327-A722-6A8D4DB1E604}</Project>
+      <Name>HEAVE_COMPENSATION</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

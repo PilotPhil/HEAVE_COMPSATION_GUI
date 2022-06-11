@@ -1,48 +1,48 @@
 ﻿#ifndef MOTORDRIVER_H
 #define MOTORDRIVER_H
 
+#include <QDebug>
 #include <QObject>
+#include <QTimer>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
-#include <QDebug>
+
 #include "motorprotocol.h"
-#include <QTimer>
 
-class MotorDriver : public MotorProtocol
-{
-    Q_OBJECT
-public:
-    explicit MotorDriver(char _motorId,const QString& _portName,int _baudRate,QObject *parent = nullptr);
+class MotorDriver : public MotorProtocol {
+  Q_OBJECT
+ public:
+  explicit MotorDriver(char _motorId, const QString& _portName, int _baudRate,
+                       QObject* parent = nullptr);
 
-    ~MotorDriver();
+  ~MotorDriver();
 
-    bool cmdMotorOff();
+  bool cmdMotorOff();
 
-    bool cmdMotorStop();
+  bool cmdMotorStop();
 
-    bool cmdMotorRun();
+  bool cmdMotorRun();
 
-    bool cmdSpeedCloseLoopControl(int speed);
+  bool cmdSpeedCloseLoopControl(int speed);
 
-    float getMotorV() const { return motorV; }
+  float getMotorV() const { return motorV; }
 
+ private:
+  /**
+   * @brief serial 串口对象
+   */
+  QSerialPort* serial;
 
-private:
-    /**
-     * @brief serial 串口对象
-     */
-    QSerialPort* serial;
+  /**
+   * @brief sendCommand 发送命令
+   * @param cmd 命令
+   * @return
+   */
+  bool sendCommand(const QByteArray& cmd);
 
-    /**
-     * @brief sendCommand 发送命令
-     * @param cmd 命令
-     * @return
-     */
-    bool sendCommand(const QByteArray& cmd);
+  void parseMotorVel();
 
-    void parseMotorVel();
-
-    float motorV=0;
+  float motorV = 0;
 };
 
-#endif // MOTORDRIVER_H
+#endif  // MOTORDRIVER_H

@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\cfg\inibase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\imu\imudriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\motor\motordriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\motor\motorprotocol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\pid\pid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotdynamicdraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotelements.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotinterication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotlayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotpid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotrealtimecurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotstaticdraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setaxis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setcurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setplot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setprint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\axisprop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\curveprop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\plotprop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\printprop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\rangeprop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\titleprop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\ui\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\source\ui\util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\ProgramFiles\Develop\QCustomPlot\qcustomplot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\PCFCUIQ5SE\qrc_res.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\cfg\inibase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\imu\imudriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\motor\motordriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\motor\motorprotocol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\pid\pid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotdynamicdraw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotelements.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotinterication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotlayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotpid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotrealtimecurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotstaticdraw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setaxis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setcurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setplot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\axisprop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\curveprop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\plotprop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\printprop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\rangeprop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\prop\titleprop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\ui\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\source\ui\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Debug\source\plot\base\ui_plotlayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Debug\source\plot\dialog\ui_setaxis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Debug\source\plot\dialog\ui_setcurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Debug\source\plot\dialog\ui_setplot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Debug\source\plot\dialog\ui_setprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Debug\source\ui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Release\source\plot\base\ui_plotlayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Release\source\plot\dialog\ui_setaxis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Release\source\plot\dialog\ui_setcurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Release\source\plot\dialog\ui_setplot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Release\source\plot\dialog\ui_setprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_Release\source\ui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_MinSizeRel\source\plot\base\ui_plotlayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_MinSizeRel\source\plot\dialog\ui_setaxis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_MinSizeRel\source\plot\dialog\ui_setcurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_MinSizeRel\source\plot\dialog\ui_setplot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_MinSizeRel\source\plot\dialog\ui_setprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_MinSizeRel\source\ui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_RelWithDebInfo\source\plot\base\ui_plotlayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_RelWithDebInfo\source\plot\dialog\ui_setaxis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_RelWithDebInfo\source\plot\dialog\ui_setcurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_RelWithDebInfo\source\plot\dialog\ui_setplot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_RelWithDebInfo\source\plot\dialog\ui_setprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\include_RelWithDebInfo\source\ui\ui_mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\871c8ec3f84bb1c3e7156304fc62c8e7\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Code\HEAVE_COMPSATION_GUI\build\CMakeFiles\304ed2badffdca62c49b497f38d073b3\qrc_res.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Code\HEAVE_COMPSATION_GUI\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\base\plotlayout.ui" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setaxis.ui" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setcurve.ui" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setplot.ui" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\source\plot\dialog\setprint.ui" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\source\res\res.qrc" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\source\ui\mainwindow.ui" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\autouic_Debug.stamp" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\autouic_Release.stamp" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="D:\Code\HEAVE_COMPSATION_GUI\build\HEAVE_COMPENSATION_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{94054C02-20F4-3B2D-9002-417077C2B0DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{BEB5BD26-EEEF-37A6-9236-463D1089CAD2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{24C34BB4-91C3-3A5A-B86A-E5935451973F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

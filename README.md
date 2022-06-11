@@ -10,7 +10,20 @@
 - 软件：Qt widgets
 - 算法：pid速度控制
 
+#### 主要控制逻辑
+```cpp
+void MainWindow::loop() {
+  auto vel_imu = imu->getVelZ();
+  auto vel_motor = motor->getMotorV();
+  auto speed = pid->control(0, vel_imu);
 
+  if (speed < 10 && speed > -10) speed = 0;
+
+  motor->cmdSpeedCloseLoopControl(speed);
+  plot->update(vel_imu, vel_motor);
+  plot2->update(vel_imu + vel_motor);
+}
+```
 
 #### 安装教程
 1. download from release
@@ -37,14 +50,14 @@
 0. cd ~
 1. cd HEAVE_COMPSATION_GUI/build
 2. touch run.sh
-   ```
+   ```properties
     sudo chmod 666 /dev/ttyUSB0
     sudo chmod 666 /dev/ttyCH343USB0
     ./HEAVE_COMPENSATION
    ```
 3. cd ~/Desktop
 4. touch HEAVE_COMPSATION.desktop
-    ```
+    ```properties
     [Desktop Entry]
     Encoding=UTF-8
     Version=1.0
