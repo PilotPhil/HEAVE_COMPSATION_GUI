@@ -1,0 +1,10 @@
+^D:\CODE\HEAVE_COMPSATION_GUI\CMAKELISTS.TXT
+setlocal
+D:\ProgramFiles\cmake\bin\cmake.exe -SD:/Code/HEAVE_COMPSATION_GUI -BD:/Code/HEAVE_COMPSATION_GUI/build --check-stamp-file D:/Code/HEAVE_COMPSATION_GUI/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
